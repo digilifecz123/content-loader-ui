@@ -1,0 +1,66 @@
+{
+  "name": "content-loader-ui",
+  "version": "1.0.0",
+  "description": "A content loader ui",
+  "main": "dist/content-loader-ui.js",
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "yarn build -- --watch",
+    "prettier": "prettier --write 'src/**/*.{js,jsx,json,css}'",
+    "deploy-storybook": "storybook-to-ghpages",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "postbuild": "uglifyjs dist/content-loader-ui.js -c --output dist/content-loader-ui.min.js",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Tuan Phung <tuan@phung.cz>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digilifecz123/content-placeholder-ui.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^15.6.1 || ^16.0.0"
+  },
+  "keywords": [
+    "react",
+    "skeleton",
+    "loader",
+    "preload",
+    "animated",
+    "dummy"
+  ],
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.12",
+    "@storybook/addon-links": "^3.3.12",
+    "@storybook/addons": "^3.3.12",
+    "@storybook/react": "^3.3.12",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-import-resolver-webpack": "^0.8.4",
+    "eslint-plugin-import": "2.12.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "style-loader": "^0.20.1",
+    "styled-components": "3.3.0",
+    "uglify-js": "^3.3.10",
+    "webpack": "^3.10.0"
+  }
+}
